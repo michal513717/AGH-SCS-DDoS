@@ -3,13 +3,10 @@ const http2 = require('http2');
 const TARGET_URL = 'https://localhost:3000';
 const DEMO_CONFIG = {
   NORMAL_REQUESTS: 3,
-  RAPID_RESET_COUNT: 20,
+  RAPID_RESET_COUNT: 50,
   DELAY_BETWEEN_RESETS: 50,
-  REQUEST_TIMEOUT: 100
+  REQUEST_TIMEOUT: 50
 };
-
-console.log('HTTP/2 Rapid Reset - Educational Demo');
-console.log('====================================');
 
 function createSession() {
   return http2.connect(TARGET_URL, {
@@ -181,9 +178,6 @@ async function checkServerImpact() {
 
 async function runEducationalDemo() {
   try {
-    console.log('Checking server availability...');
-    console.log('Testing HTTPS connection...');
-    
     await demonstrateNormalBehavior();
     await new Promise(resolve => setTimeout(resolve, 2000));
     

@@ -105,6 +105,4 @@ server.listen(3000, () => {
   console.log('Running on https://localhost:3000');
   console.log('Metrics available at /metrics');
   console.log('Slow endpoint at /slow');
-  console.log('');
-  console.log('WARNING: Educational demo - use locally only!');
 });
