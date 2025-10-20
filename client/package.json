@@ -1,7 +1,7 @@
 {
-  "name": "server",
+  "name": "client",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,7 +9,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "crypto": "^1.0.1",
     "fs": "^0.0.1-security",
     "http2": "^3.3.6",
     "ws": "^8.18.3"
