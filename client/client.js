@@ -1,6 +1,6 @@
 const http2 = require('http2');
 
-const TARGET_URL = 'https://localhost:3000';
+const TARGET_URL = 'https://server:3000';
 const DEMO_CONFIG = {
   NORMAL_REQUESTS: 3,
   RAPID_RESET_COUNT: 50,

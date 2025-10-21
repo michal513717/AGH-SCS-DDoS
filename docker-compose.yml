@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/server
+
+  client1:
+    build: ./client
+    depends_on:
+      - server
+    volumes:
+      - ./client:/client
+
+  client2:
+    build: ./client
+    depends_on:
+      - server
+    volumes:
+      - ./client:/client
+
+  client3:
+    build: ./client
+    depends_on:
+      - server
+    volumes:
+      - ./client:/client

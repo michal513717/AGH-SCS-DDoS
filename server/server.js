@@ -100,7 +100,7 @@ server.on('session', (session) => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(3000, '0.0.0.0', () => {
   console.log('HTTP/2 Rapid Reset Demo Server');
   console.log('Running on https://localhost:3000');
   console.log('Metrics available at /metrics');
